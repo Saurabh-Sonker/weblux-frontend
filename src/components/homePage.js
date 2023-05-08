@@ -7,6 +7,9 @@ const HomePage = () => {
 
     const navigate = useNavigate();
 
+    const devPage = () => {
+        navigate('/dev')
+    }
     const loginPage = () => {
         navigate('/login')
     }
@@ -14,6 +17,7 @@ const HomePage = () => {
     const registrationPage = () => {
         navigate('/registration')
     }
+    
 
     return (
         <>
@@ -22,6 +26,7 @@ const HomePage = () => {
                     <img src={logoImage} class="logo" />
                     <ul>
                         <li><a href="#">Home</a></li>
+                        <button class="button" onClick={devPage}>Dev</button>
                         <button class="button" onClick={loginPage}>Login</button>
                         <button class="button" onClick={registrationPage}>Registration</button>
                     </ul>
